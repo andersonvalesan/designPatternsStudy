@@ -1,17 +1,24 @@
 public class ShowSalary{
 
-    private static float defaultSalary = 5000;
+    private static final float DEFAULT_SALARY = 5000;
 
-    private static CalculateSalary calculateProgrammersSalary;
-    private static CalculateSalary calculateTestersSalary;
+    private static CalculateSalary calculateSalary;
+    private static Roles role;
 
     public static void main(String[] args) {
-        calculateProgrammersSalary = new CalculateProgrammersSalary(defaultSalary);
+        role = Roles.programmer;
+        Person employee = new Person(role);
 
-		System.out.println("Programmers Salary: " + calculateProgrammersSalary.calculate());
+        switch(employee.getRole()){
+            case programmer:
+                calculateSalary = new CalculateProgrammersSalary( DEFAULT_SALARY );
+            break;
 
-        calculateTestersSalary = new CalculateTestersSalary(defaultSalary);        
-
-		System.out.println("Testers Salary: " + calculateTestersSalary.calculate());
+            case tester:            
+                calculateSalary = new CalculateTestersSalary( DEFAULT_SALARY );
+            break;
+        }
+            
+		System.out.println("Employee's "+ employee.getRole() +" Salary: " + calculateSalary.calculate());
 	}
 }
