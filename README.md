@@ -7,3 +7,5 @@ NullObject - Tem a verificação de nullable na criação do objeto, não precis
 Template Method - Usado quando várias classes possuem o mesmo comportamento geral, mas diferem nos detalhes das funções.
 
 Factory Method - Delega para a classe FactoryMethod a opção de qual classe mais concreta usar.
+
+Bridge - Associa um objeto específico a uma característica específica. 
