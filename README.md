@@ -9,3 +9,5 @@ Template Method - Usado quando várias classes possuem o mesmo comportamento ger
 Factory Method - Delega para a classe FactoryMethod a opção de qual classe mais concreta usar.
 
 Bridge - Associa um objeto específico a uma característica específica. 
+
+State - Usado quando um objeto tem vários estados com restrições que vão passando de um para o outro.
